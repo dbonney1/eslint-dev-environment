@@ -1,0 +1,20 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        // enable additional rules
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "no-undef":"off",
+        "no-unused-vars":"warn",
+        // disable rules from base configurations
+        "no-console": "off"
+    }
+}
