@@ -32,13 +32,13 @@ const budget = {
             title: "Donations",
             budget: 10,
         },
-    ]
+    ],
 };
 
 function generateTable(b) {
     const p = document.getElementById("list");
     p.innerHTML = "";
-    for (var i = 0; i < b.length; i++) {
+    for (let i = 0; i < b.length; i++) {
         const div = document.createElement("div");
         div.innerHTML = `${b[i].title} - ${b[i].budget}`;
         p.appendChild(div);
@@ -49,24 +49,24 @@ generateTable(budget.myBudget);
 
 function aZ() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.title > b.title) ? 1 : - 1);
+    newArray.sort((a, b) => (a.title > b.title ? 1 : -1));
     generateTable(newArray);
 }
 
 function zA() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.title < b.title) ? 1 : - 1);
+    newArray.sort((a, b) => (a.title < b.title ? 1 : -1));
     generateTable(newArray);
 }
 
 function biggerBudget() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.budget < b.budget) ? 1 : - 1);
+    newArray.sort((a, b) => (a.budget < b.budget ? 1 : -1));
     generateTable(newArray);
 }
 
 function smallerBudget() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.budget > b.budget) ? 1 : - 1);
+    newArray.sort((a, b) => (a.budget > b.budget ? 1 : -1));
     generateTable(newArray);
 }
